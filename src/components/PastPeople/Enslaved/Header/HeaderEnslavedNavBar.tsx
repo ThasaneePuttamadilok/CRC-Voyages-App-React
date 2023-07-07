@@ -17,9 +17,13 @@ import {
   getTextColor,
   getColorBoxShadow,
   getColorBackgroundEnslaved,
+  getColorNavbarEnslavedBackground,
 } from "@/utils/getColorStyle";
 
-import { BaseFilter } from "@/share/InterfactTypesDatasetCollection";
+import {
+  BaseFilter,
+  DataSetCollectionProps,
+} from "@/share/InterfactTypesDatasetCollection";
 import { EnslavedTitle } from "@/share/CONST_DATA";
 import CanscandingMenuMobile from "@/components/canscanding/CanscandingMenuMobile";
 import CanscandingMenu from "@/components/canscanding/CanscandingMenu";
@@ -92,7 +96,7 @@ export default function HeaderEnslavedNavBar() {
       <AppBar
         component="nav"
         style={{
-          backgroundColor: getColorNavbarBackground(styleName),
+          backgroundColor: getColorNavbarEnslavedBackground(styleName),
           fontSize: 12,
           boxShadow: "none",
           marginTop: "3rem",
@@ -190,7 +194,7 @@ export default function HeaderEnslavedNavBar() {
             >
               Select dataset
             </Box>
-            {value.map((item, index) => {
+            {value.map((item: DataSetCollectionProps, index: number) => {
               const { base_filter, headers, style_name, blocks } = item;
               return (
                 <Button

@@ -49,6 +49,17 @@ export const getColorNavbarBackground = (item: string) => {
     return background;
 };
 
+export const getColorNavbarEnslavedBackground = (item: string) => {
+    let background = "#b29493";
+    if (item === TYPESOFDATASETPEOPLE.allEnslaved) {
+        background = "#b29493";
+    } else if (item === TYPESOFDATASETPEOPLE.africanOrigins) {
+        background = "rgba(56, 116, 203, 0)";
+    } else if (item === TYPESOFDATASETPEOPLE.texas) {
+        background = "rgba(187, 105, 46)";
+    }
+    return background;
+};
 export const getColorHoverBackground = (item: string) => {
     let background = "rgb(84, 191, 182)";
     if (item === TYPESOFDATASET.allVoyages) {
